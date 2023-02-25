@@ -6,19 +6,6 @@ int counterBoMe = 0;
 int counterConCai = 0;
 int counterCoChu = 0;
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => MyAppState();
-}
-
-class MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
 
 class OngBa extends StatefulWidget {
   const OngBa({Key? key}) : super(key: key);
