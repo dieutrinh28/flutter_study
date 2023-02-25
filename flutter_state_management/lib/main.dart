@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_state_management/multiConsumer.dart';
 import 'package:provider/provider.dart';
 
 import 'useSetState.dart';
@@ -30,14 +31,26 @@ import 'multiProvider.dart';
 //   );
 // }
 
-void main() {
+// void main() {
+//   runApp(
+//     MultiProvider(
+//       providers: [
+//         ChangeNotifierProvider(create: (_) => MyMultiProvider()),
+//         ChangeNotifierProvider(create: (_) => Counter())
+//       ],
+//       child: const MyMulti(),
+//     ),
+//   );
+// }
+
+void main(List<String> args) {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => MyMultiProvider()),
-        ChangeNotifierProvider(create: (_) => Counter())
+        ChangeNotifierProvider(create: (_) => GioiTinh()),
+        ChangeNotifierProvider(create: (_) => BangCap())
       ],
-      child: const MyMulti(),
+      child: const MaterialApp(home: MyMultiConsumer()),
     ),
   );
 }
